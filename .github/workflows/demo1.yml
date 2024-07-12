@@ -4,7 +4,61 @@ on:
     types:
       - opened
       - edited
+    branches:
+      - main
+      - master
+      - feature/*
+      - bugfix/*
+      - hotfix/*
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+      - feature/*
+      - bugfix/*
+      - hotfix/*
+      - postqa/*
+      - preuat/*
+      - postuat/*
+      - predev/*
+      - postdev/*
+      - pretest/*
+      - posttest/*
+      - prebuild/*
+      - postbuild/*
+      - prerelease/*
+      - postrelease/*
+      - prehotfix/*
+      - posthotfix/*
+      - prebugfix/*
+      - postbugfix/*
+      - prefeature/*
+      - postfeature/*
+      - preproduction/*
+      - postproduction/*
+      - predevelopment/*
+      - postdevelopment/*
+      - pretesting/*
+      - posttesting/*
+      - prestaging/*
+      - poststaging/*
+      - preqaing/*
+      - postqaing/*
+      - preuatting/*
+      - postuatting/*
+      - prehotfixing/*
+      - posthotfixing/*
+    paths-ignore:
+      - '.github/workflows/**'
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+      - 'CODE_OF_CONDUCT.md'
+      - 'LICENSE'
+      - 'SECURITY.md'
+      - 'PULL_REQUEST_TEMPLATE.md'
+      - 'ISSUE_TEMPLATE.md'
+      - 'docs/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
